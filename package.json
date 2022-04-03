@@ -1,0 +1,26 @@
+{
+  "name": "apinews",
+  "version": "1.0.0",
+  "description": "api for news from many providers",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gsamama/apinews.git"
+  },
+  "author": "Gilbert Samama",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gsamama/apinews/issues"
+  },
+  "homepage": "https://github.com/gsamama/apinews#readme",
+  "dependencies": {
+    "axios": "^0.26.1",
+    "cheerio": "^1.0.0-rc.10",
+    "express": "^4.17.3",
+    "heroku": "^7.60.1"
+  }
+}
