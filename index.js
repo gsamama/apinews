@@ -1,4 +1,4 @@
-const PORT = 80;
+const PORT = process.env.PORT | 39404;
 
 const express = require("express");
 const axios = require("axios");
