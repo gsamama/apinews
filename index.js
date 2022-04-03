@@ -27,8 +27,13 @@ const newspapers = [
     name: 'CNN', 
     address:'https://edition.cnn.com/specials/world/cnn-climate',
     base: 'https://www.cnn.com'
+  },
+  {
+    name: 'CityAM', 
+    address:'https://www.cityam.com/green-economy/',
+    base: 'https://www.cityam.com/'
   }
-  
+  //https://www.cityam.com/green-economy/
 ];
 
 
@@ -65,6 +70,14 @@ newspapers.map(newspaper=>{
         })
       }
       if(newspaper.name==='CNN') {
+        $('h3 > a', html).each(function(){
+          const title = $(this).text().trim();
+          const url = ($(this).attr('href').indexOf('http')!==-1)? $(this).attr('href') : newspaper.base + $(this).attr('href');
+          const source = newspaper.name;
+          if(title.indexOf('Instagram')===-1) articles.push({title, url, source});
+        })
+      }
+      if(newspaper.name==='CityAM') {
         $('h3 > a', html).each(function(){
           const title = $(this).text().trim();
           const url = ($(this).attr('href').indexOf('http')!==-1)? $(this).attr('href') : newspaper.base + $(this).attr('href');
