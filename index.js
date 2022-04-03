@@ -88,5 +88,5 @@ app.get('/news/:newspaperId', async (req, res, next)=>{
   const filtered = articles.filter(item=> item.source.toLowerCase() === req.params.newspaperId.toLowerCase());
   res.json(filtered);
 })
-
-app.listen(PORT, ()=>console.log(`running at port ${PORT}`))
+app.listen();
+//app.listen(PORT, ()=>console.log(`running at port ${PORT}`))
