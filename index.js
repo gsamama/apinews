@@ -1,4 +1,5 @@
 const PORT = process.env.PORT | 80;
+var port_number = server.listen(process.env.PORT || 3000);
 
 const express = require("express");
 const axios = require("axios");
@@ -88,5 +89,5 @@ app.get('/news/:newspaperId', (req, res, next)=>{
   const filtered = articles.filter(item=> item.source.toLowerCase() === req.params.newspaperId.toLowerCase());
   res.json(filtered);
 })
-app.listen();
+app.listen(port_number);
 //app.listen(PORT, ()=>console.log(`running at port ${PORT}`))
